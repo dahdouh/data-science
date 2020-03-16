@@ -1,0 +1,19 @@
+source ~/anaconda3/bin/activate root
+anaconda-navigator
+
+Pour faire de la classification à partir de données textuelles, il faut convertir les textes en vecteurs.
+
+D'abord, transformer le document texte en une séquence de mots, puis la transformer en vecteur.
+La vectorisation consiste à utiliser une liste de mots(vocabulaire) et de compter le nombre d'occurrence/apparition de chaque mot dans le document text.
+
+Une alternative de CountVectorizer est d'utiliser la mesure TF-IDF (Term Frequency – Inverse Document).
+
+On peut utiliser CountVectorizer et le faire suivre  par TfidfTransformer pour simplement mettre à jour les valeurs.
+
+
+Enuite, on applique plusieurs opérations de prétraitements qui permettent de supprimer les caractères ASCII, de mettre en miniscule, d'enlever les ponctuations, de remplacer les membres par 
+des mots., et d'enlever les stopwords.
+
+
+
+On a évaluer la performance de notre modèle. Pour mésurer la qualité de la prédictionn on caclulé la mesure de l'accuracy (pourcetage de prédictions correctes)
